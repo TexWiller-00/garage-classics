@@ -1,0 +1,26 @@
+ATIVIDADE INDIVIDUAL — SEMANA 6
+Projeto: Garage Classics
+
+Funcionalidade escolhida:
+Formulário de contato funcional
+
+Nome da tabela no banco:
+mensagens
+
+Campos da tabela (com tipos):
+id INT AUTO_INCREMENT PRIMARY KEY
+nome VARCHAR(100) NOT NULL
+email VARCHAR(150) NOT NULL
+mensagem TEXT NOT NULL
+data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+Operações do CRUD que vou usar:
+CREATE (INSERT), READ (SELECT), UPDATE e DELETE
+
+Arquivo(s) PHP que vou criar:
+php/conexao.php
+php/contato.php
+php/mensagens.php
+php/editar.php
+php/atualizar.php
+php/excluir.php

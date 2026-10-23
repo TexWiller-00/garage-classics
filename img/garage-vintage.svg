@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+<rect width="1200" height="500" fill="#33231C"/>
+<rect x="60" y="70" width="1080" height="360" fill="#211B18" stroke="#B3945A" stroke-width="3"/>
+<path d="M170 350 L300 265 L650 245 L825 285 L1015 350 Z" fill="#68432E" stroke="#B3945A" stroke-width="4"/>
+<circle cx="355" cy="350" r="55" fill="#211B18" stroke="#B3945A" stroke-width="8"/>
+<circle cx="870" cy="350" r="55" fill="#211B18" stroke="#B3945A" stroke-width="8"/>
+<path d="M330 265 L430 190 L700 185 L800 270" fill="none" stroke="#B3945A" stroke-width="5"/>
+<text x="600" y="130" text-anchor="middle" fill="#F1E6D0" font-family="Georgia,serif" font-size="48">GARAGE CLASSICS</text>
+</svg>

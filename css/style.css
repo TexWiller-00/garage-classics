@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --creme-vintage: #F1E6D0;
+    --marrom-cafe: #33231C;
+    --marrom-couro: #68432E;
+    --vinho: #7F2929;
+    --verde-oliva: #53634A;
+    --dourado: #B3945A;
+    --azul-petroleo: #31545A;
+    --preto-carvao: #211B18;
+    --branco-marfim: #FFF8E9;
+
+    --espacamento: 20px;
+    --espacamento-grande: 50px;
+    --borda: 1px solid rgba(179, 148, 90, .55);
+    --sombra: 0 12px 35px rgba(33, 27, 24, .16);
+    --raio: 3px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--preto-carvao);
+    background: var(--creme-vintage);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+   Mobile First
+   ========================= */
+.header {
+    background: var(--marrom-cafe);
+    color: var(--branco-marfim);
+    border-bottom: 1px solid rgba(179, 148, 90, .5);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--dourado);
+    text-decoration: none;
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--dourado);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.logo-text {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--branco-marfim);
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 17px;
+    letter-spacing: 1.4px;
+    transition: color .25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.ativo {
+    color: var(--dourado);
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--branco-marfim);
+    background:
+        linear-gradient(90deg, rgba(33, 27, 24, .94) 0%, rgba(33, 27, 24, .68) 48%, rgba(33, 27, 24, .36) 100%),
+        radial-gradient(circle at 75% 45%, rgba(179, 148, 90, .25), transparent 28%),
+        linear-gradient(135deg, var(--marrom-cafe), var(--preto-carvao));
+}
+
+.hero::after {
+    content: "GARAGE";
+    position: absolute;
+    right: -10px;
+    bottom: -48px;
+    color: rgba(179, 148, 90, .08);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 180px;
+    letter-spacing: 8px;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    padding: 80px 0;
+}
+
+.eyebrow {
+    color: var(--dourado);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 19px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(58px, 14vw, 108px);
+    line-height: .9;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    max-width: 650px;
+    color: var(--creme-vintage);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 1px solid var(--dourado);
+    border-radius: var(--raio);
+    background: var(--vinho);
+    color: var(--creme-vintage);
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    transition: transform .25s ease, background .25s ease, color .25s ease;
+}
+
+.botao:hover {
+    background: var(--dourado);
+    color: var(--marrom-cafe);
+    transform: translateY(-2px);
+}
+
+.botao.secundario {
+    background: transparent;
+    color: var(--creme-vintage);
+    border-color: var(--dourado);
+}
+
+/* =========================
+   SEÇÕES
+   ========================= */
+.secao {
+    padding: var(--espacamento-grande) 0;
+}
+
+.secao-escura {
+    background: var(--marrom-cafe);
+    color: var(--branco-marfim);
+}
+
+.titulo-secao {
+    margin-bottom: 12px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.subtitulo {
+    max-width: 720px;
+    margin-bottom: 32px;
+    color: #5f5149;
+}
+
+.secao-escura .subtitulo {
+    color: var(--creme-vintage);
+}
+
+.linha-decorativa {
+    width: 100%;
+    height: 1px;
+    margin: 22px 0 30px;
+    background: linear-gradient(90deg, var(--dourado), transparent);
+}
+
+/* =========================
+   CARDS / FLEXBOX
+   ========================= */
+.cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--espacamento);
+}
+
+.card {
+    flex: 1 1 100%;
+    overflow: hidden;
+    border: var(--borda);
+    border-radius: var(--raio);
+    background: var(--marrom-couro);
+    color: var(--branco-marfim);
+    box-shadow: var(--sombra);
+}
+
+.card-imagem {
+    min-height: 230px;
+    display: flex;
+    align-items: flex-end;
+    padding: 18px;
+    background:
+        linear-gradient(0deg, rgba(33, 27, 24, .85), rgba(33, 27, 24, .08)),
+        linear-gradient(135deg, #4c3428, #9b6d49 48%, #2d2621);
+}
+
+.card-numero {
+    color: var(--dourado);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 55px;
+    line-height: 1;
+    opacity: .85;
+}
+
+.card-conteudo {
+    padding: 22px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    color: var(--branco-marfim);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 31px;
+    letter-spacing: 1px;
+}
+
+.especificacoes {
+    color: var(--creme-vintage);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.preco {
+    color: var(--dourado);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 31px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 18px;
+    color: #d4e2cd;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--verde-oliva);
+    box-shadow: 0 0 0 3px rgba(83, 99, 74, .18);
+}
+
+/* =========================
+   DESTAQUE / HISTÓRIA
+   ========================= */
+.destaque {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.destaque-texto {
+    flex: 1;
+}
+
+.destaque-imagem {
+    flex: 1;
+    min-height: 300px;
+    border: var(--borda);
+    background:
+        linear-gradient(135deg, rgba(49, 84, 90, .55), rgba(104, 67, 46, .85)),
+        var(--marrom-couro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dourado);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 56px;
+    letter-spacing: 3px;
+}
+
+/* =========================
+   SELOS / DETALHES
+   ========================= */
+.selos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.selo {
+    padding: 6px 12px;
+    border: 1px solid var(--dourado);
+    color: var(--dourado);
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.info-box {
+    padding: 25px;
+    border-left: 4px solid var(--azul-petroleo);
+    background: rgba(49, 84, 90, .1);
+}
+
+.info-box strong {
+    color: var(--azul-petroleo);
+}
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    max-width: 760px;
+}
+
+.formulario label {
+    font-weight: 700;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid rgba(104, 67, 46, .45);
+    border-radius: var(--raio);
+    background: var(--branco-marfim);
+    color: var(--preto-carvao);
+    font: inherit;
+    margin-bottom: 10px;
+}
+
+.formulario button {
+    align-self: flex-start;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+    padding: 40px 0;
+    background: var(--marrom-cafe);
+    color: var(--creme-vintage);
+    border-top: 1px solid rgba(179, 148, 90, .45);
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer h3 {
+    color: var(--dourado);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.footer p,
+.footer a {
+    color: var(--creme-vintage);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(179, 148, 90, .25);
+    font-size: 13px;
+}
+
+/* =========================
+   DESKTOP: Mobile First + min-width
+   ========================= */
+@media (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+
+    .card {
+        flex: 1 1 calc(33.333% - var(--espacamento));
+    }
+
+    .destaque {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-grid > div {
+        flex: 1;
+    }
+}
+
+/* =========================================================
+   RESPONSIVIDADE — AULA 3 (MOBILE FIRST)
+   Base = celular; telas maiores = media queries
+   ========================================================= */
+
+/* Tablet e telas maiores: reorganiza os elementos em linha */
+@media (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--espacamento);
+    }
+
+    .card {
+        flex: 1 1 calc(33.333% - var(--espacamento));
+    }
+
+    .destaque {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}
+
+/* Desktop: aproveita melhor o espaço disponível */
+@media (min-width: 1024px) {
+    .container {
+        width: min(1180px, calc(100% - 60px));
+    }
+
+    .nav-links {
+        gap: 28px;
+    }
+
+    .hero-content {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .cards {
+        gap: 24px;
+    }
+}
+
+
+/* Estados usados pela interatividade JavaScript */
+.mensagem-form {
+    min-height: 24px;
+    margin-bottom: 8px;
+    color: var(--vinho);
+    font-weight: 700;
+}
+.mensagem-form.sucesso { color: var(--verde-oliva); }
+.nav-links a.ativo {
+    color: var(--dourado);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}

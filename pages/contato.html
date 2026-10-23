@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garage Classics — carros clássicos, tradição, história e personalidade.">
+    <title>Garage Classics - Contato</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a class="logo" href="../index.html">
+                    <span class="logo-mark">GC</span>
+                    <span class="logo-text">GARAGE CLASSICS</span>
+                </a>
+                <ul class="nav-links">
+                <li><a class="" href="../index.html">INÍCIO</a></li>
+                <li><a class="" href="veiculos.html">VEÍCULOS</a></li>
+                <li><a class="" href="garagem.html">NOSSA GARAGEM</a></li>
+                <li><a class="" href="historia.html">HISTÓRIA</a></li>
+                <li><a class="ativo" href="contato.html">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="secao">
+            <div class="container">
+                <p class="eyebrow">FALE COM A GARAGE CLASSICS</p>
+                <h1 class="titulo-secao">CONTATO</h1>
+                <p class="subtitulo">Quer conhecer um clássico, tirar dúvidas ou falar sobre seu próprio automóvel? Envie uma mensagem.</p>
+                <div class="linha-decorativa"></div>
+
+                <form class="formulario" id="form-contato" action="../php/contato.php" method="POST">
+                    <label for="nome">Nome</label>
+                    <input id="nome" name="nome" type="text" required>
+
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="7" required></textarea>
+
+                    <button class="botao" type="submit">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>GARAGE CLASSICS</h3>
+                    <p>Clássicos selecionados para quem entende de automóveis.</p>
+                </div>
+                <div>
+                    <h3>CONTATO</h3>
+                    <p>Telefone: (00) 00000-0000</p>
+                    <p>WhatsApp: (00) 00000-0000</p>
+                </div>
+                <div>
+                    <h3>ENDEREÇO</h3>
+                    <p>Rua dos Clássicos, 100</p>
+                    <p>São Paulo - SP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Garage Classics — Tradição, história e personalidade.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js" defer></script>
+</body>
+</html>
